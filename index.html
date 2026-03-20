@@ -496,6 +496,69 @@
             line-height: 1.4;
         }
 
+        /* Value Delivered Section */
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .value-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-top-width: 3px;
+            border-top-style: solid;
+            border-radius: 12px;
+            padding: 24px 16px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 12px;
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(16px);
+        }
+
+        .value-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .value-card:hover {
+            transform: translateY(-4px) scale(1.02) rotate(5deg);
+            box-shadow: 0 12px 32px var(--shadow);
+        }
+
+        .value-card--blue  { border-top-color: var(--accent); }
+        .value-card--purple { border-top-color: var(--gradient-2); }
+
+        .value-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+            box-shadow: 0 4px 12px var(--shadow);
+        }
+
+        .value-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .value-desc {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
         /* Content Section */
         .content-section {
             margin-bottom: 32px;
@@ -543,6 +606,9 @@
 
         @media (max-width: 500px) {
             .inspiration-grid {
+                grid-template-columns: 1fr;
+            }
+            .value-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -684,6 +750,22 @@
                 <span class="skill">Customer Engagement</span>
                 <span class="skill">API Products</span>
                 <span class="skill">Growth</span>
+            </div>
+        </section>
+
+        <section class="section">
+            <h3 class="section-title">Value Delivered</h3>
+            <div class="value-grid">
+                <div class="value-card value-card--blue">
+                    <div class="value-icon">💰</div>
+                    <h4 class="value-title">Monetisation Guide</h4>
+                    <p class="value-desc">Created a comprehensive monetisation guide for the Product team to accelerate revenue decision-making.</p>
+                </div>
+                <div class="value-card value-card--purple">
+                    <div class="value-icon">🤖</div>
+                    <h4 class="value-title">AI Slack Channel</h4>
+                    <p class="value-desc">Founded an internal AI forum for co-learning and sharing real-world use cases across the organisation.</p>
+                </div>
             </div>
         </section>
 
@@ -893,6 +975,11 @@
 
             // Observe inspiration items
             document.querySelectorAll('.inspiration-item').forEach((item, index) => {
+                item.style.transitionDelay = `${index * 0.1}s`;
+                observer.observe(item);
+            });
+
+            document.querySelectorAll('.value-card').forEach((item, index) => {
                 item.style.transitionDelay = `${index * 0.1}s`;
                 observer.observe(item);
             });
