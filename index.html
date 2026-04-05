@@ -633,13 +633,17 @@
             }
         }
 
-        /* Staggered animations for timeline items */
-        .timeline-item:nth-child(1) { transition-delay: 0.1s; }
-        .timeline-item:nth-child(2) { transition-delay: 0.2s; }
-        .timeline-item:nth-child(3) { transition-delay: 0.3s; }
-        .timeline-item:nth-child(4) { transition-delay: 0.4s; }
-        .timeline-item:nth-child(5) { transition-delay: 0.5s; }
-        .timeline-item:nth-child(6) { transition-delay: 0.6s; }
+        /* Reduced motion preference */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            html {
+                scroll-behavior: auto;
+            }
+        }
 
         /* Responsive */
         @media (max-width: 600px) {
@@ -669,7 +673,7 @@
     </style>
 </head>
 <body>
-    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Switch to dark mode">
         <span class="icon">🌙</span>
     </button>
     <div class="container">
@@ -718,7 +722,7 @@
             
             <div class="inspiration-grid">
                 <a href="https://www.lennysnewsletter.com" target="_blank" class="inspiration-item">
-                    <img src="https://www.google.com/s2/favicons?domain=lennysnewsletter.com&sz=128" alt="Lenny">
+                    <img src="https://www.google.com/s2/favicons?domain=lennysnewsletter.com&sz=128" alt="Lenny" loading="lazy">
                     <div class="inspiration-info">
                         <h4>Lenny Rachitsky</h4>
                         <p>Creator of Lenny's Newsletter, sharing deep research on product, growth, and career advice.</p>
@@ -726,7 +730,7 @@
                 </a>
 
                 <a href="https://www.talraviv.co/" target="_blank" class="inspiration-item">
-                    <img src="https://www.google.com/s2/favicons?domain=talraviv.co&sz=128" alt="Tal Raviv">
+                    <img src="https://www.google.com/s2/favicons?domain=talraviv.co&sz=128" alt="Tal Raviv" loading="lazy">
                     <div class="inspiration-info">
                         <h4>Tal Raviv</h4>
                         <p>Tech investor and operator sharing insights on building successful startups.</p>
@@ -734,7 +738,7 @@
                 </a>
 
                 <a href="https://www.linkedin.com/in/adir-shiffman?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="inspiration-item">
-                    <img src="https://www.google.com/s2/favicons?domain=linkedin.com&sz=128" alt="Adir Shiffman">
+                    <img src="https://www.google.com/s2/favicons?domain=linkedin.com&sz=128" alt="Adir Shiffman" loading="lazy">
                     <div class="inspiration-info">
                         <h4>Adir Shiffman</h4>
                         <p>Serial entrepreneur and author focused on startup growth and leadership.</p>
@@ -742,7 +746,7 @@
                 </a>
 
                 <a href="https://www.linkedin.com/in/adam-schwab-64b439a?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="inspiration-item">
-                    <img src="https://www.google.com/s2/favicons?domain=linkedin.com&sz=128" alt="Adam Schwab">
+                    <img src="https://www.google.com/s2/favicons?domain=linkedin.com&sz=128" alt="Adam Schwab" loading="lazy">
                     <div class="inspiration-info">
                         <h4>Adam Schwab</h4>
                         <p>Journalist and analyst covering tech, startups, and business strategy.</p>
@@ -789,7 +793,7 @@
                 <div class="timeline-item">
                     <div class="timeline-header">
                         <div class="timeline-logo">
-                            <img src="https://www.google.com/s2/favicons?domain=pexa.com.au&sz=64" alt="PEXA" onerror="this.parentElement.style.background='linear-gradient(135deg, #4f46e5, #7c3aed)'; this.parentElement.innerHTML='P'">
+                            <img src="https://www.google.com/s2/favicons?domain=pexa.com.au&sz=64" alt="PEXA" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg, #4f46e5, #7c3aed)'; this.parentElement.innerHTML='P'">
                         </div>
                         <p class="timeline-company">PEXA</p>
                     </div>
@@ -805,7 +809,7 @@
                 <div class="timeline-item">
                     <div class="timeline-header">
                         <div class="timeline-logo">
-                            <img src="https://www.google.com/s2/favicons?domain=pexa.com.au&sz=64" alt="PEXA" onerror="this.parentElement.style.background='linear-gradient(135deg, #4f46e5, #7c3aed)'; this.parentElement.innerHTML='P'">
+                            <img src="https://www.google.com/s2/favicons?domain=pexa.com.au&sz=64" alt="PEXA" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg, #4f46e5, #7c3aed)'; this.parentElement.innerHTML='P'">
                         </div>
                         <p class="timeline-company">PEXA</p>
                     </div>
@@ -823,7 +827,7 @@
                 <div class="timeline-item">
                     <div class="timeline-header">
                         <div class="timeline-logo">
-                            <img src="https://www.google.com/s2/favicons?domain=scoopon.com.au&sz=64" alt="Scoopon" onerror="this.parentElement.style.background='linear-gradient(135deg, #f59e0b, #ef4444)'; this.parentElement.innerHTML='Sc'">
+                            <img src="https://www.google.com/s2/favicons?domain=scoopon.com.au&sz=64" alt="Scoopon" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg, #f59e0b, #ef4444)'; this.parentElement.innerHTML='Sc'">
                         </div>
                         <p class="timeline-company">Scoopon</p>
                     </div>
@@ -840,7 +844,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-header">
-                        <div class="timeline-logo"><img src="https://www.google.com/s2/favicons?domain=anz.com.au&sz=64" alt="ANZ" onerror="this.parentElement.style.background='linear-gradient(135deg, #0d9488, #0891b2)'; this.parentElement.innerHTML='ANZ'"></div>
+                        <div class="timeline-logo"><img src="https://www.google.com/s2/favicons?domain=anz.com.au&sz=64" alt="ANZ" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg, #0d9488, #0891b2)'; this.parentElement.innerHTML='ANZ'"></div>
                         <p class="timeline-company">ANZ</p>
                     </div>
                     <h4 class="timeline-role">Multiple Roles</h4>
@@ -869,12 +873,14 @@
         // Theme toggle
         function toggleTheme() {
             const html = document.documentElement;
-            const btn = document.querySelector('.theme-toggle .icon');
+            const toggle = document.querySelector('.theme-toggle');
+            const btn = toggle.querySelector('.icon');
             const current = html.getAttribute('data-theme');
             const next = current === 'dark' ? 'light' : 'dark';
-            
+
             html.setAttribute('data-theme', next);
             btn.textContent = next === 'dark' ? '☀️' : '🌙';
+            toggle.setAttribute('aria-label', next === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
             localStorage.setItem('theme', next);
         }
 
@@ -883,10 +889,11 @@
             const saved = localStorage.getItem('theme');
             const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
             const theme = saved || (prefersDark ? 'dark' : 'light');
-            
+
             if (theme === 'dark') {
                 document.documentElement.setAttribute('data-theme', 'dark');
                 document.querySelector('.theme-toggle .icon').textContent = '☀️';
+                document.querySelector('.theme-toggle').setAttribute('aria-label', 'Switch to light mode');
             }
         })();
 
@@ -906,8 +913,9 @@
                 });
             }, observerOptions);
 
-            // Observe timeline items
-            document.querySelectorAll('.timeline-item').forEach(item => {
+            // Observe timeline items with dynamic stagger delays
+            document.querySelectorAll('.timeline-item').forEach((item, index) => {
+                item.style.transitionDelay = `${index * 0.1}s`;
                 observer.observe(item);
             });
 
@@ -923,13 +931,23 @@
             });
 
             // Parallax-like effect on scroll for avatar
-            window.addEventListener('scroll', () => {
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if (!prefersReducedMotion) {
                 const avatar = document.querySelector('.avatar');
-                const scrolled = window.pageYOffset;
-                if (scrolled < 100) {
-                    avatar.style.transform = `translateY(${scrolled * 0.1}px)`;
-                }
-            });
+                let ticking = false;
+                window.addEventListener('scroll', () => {
+                    if (!ticking) {
+                        requestAnimationFrame(() => {
+                            const scrolled = window.pageYOffset;
+                            if (scrolled < 100) {
+                                avatar.style.transform = `translateY(${scrolled * 0.1}px)`;
+                            }
+                            ticking = false;
+                        });
+                        ticking = true;
+                    }
+                }, { passive: true });
+            }
         });
     </script>
 </body>
