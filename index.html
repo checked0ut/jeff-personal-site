@@ -269,135 +269,6 @@
             border-bottom: 1px solid var(--border);
         }
 
-        /* Timeline */
-        .timeline {
-            position: relative;
-            padding-left: 24px;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 8px;
-            bottom: 8px;
-            width: 2px;
-            background: linear-gradient(to bottom, var(--gradient-1), var(--gradient-2));
-            border-radius: 2px;
-        }
-
-        .timeline-item {
-            position: relative;
-            padding-bottom: 32px;
-            opacity: 0;
-            transform: translateY(24px);
-            transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
-        }
-
-        .timeline-item.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .timeline-item:last-child {
-            padding-bottom: 0;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -28px;
-            top: 8px;
-            width: 10px;
-            height: 10px;
-            background: var(--surface);
-            border: 3px solid var(--accent);
-            border-radius: 50%;
-            transition: all 0.2s ease-in-out;
-        }
-
-        .timeline-item:hover::before {
-            background: var(--accent);
-            transform: scale(1.3);
-            box-shadow: 0 0 8px var(--accent-light);
-        }
-
-        .timeline-header {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 4px;
-        }
-
-        .timeline-logo {
-            width: 32px;
-            height: 32px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.7rem;
-            font-weight: 700;
-            color: white;
-            flex-shrink: 0;
-            overflow: hidden;
-            background: white;
-        }
-
-        .timeline-logo img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-
-        .timeline-company {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            font-weight: 500;
-        }
-
-        .timeline-role {
-            font-size: 1rem;
-            font-weight: 500;
-            margin-bottom: 2px;
-        }
-
-        .timeline-period {
-            color: var(--text-muted);
-            font-size: 0.75rem;
-            margin-bottom: 10px;
-        }
-
-        .timeline-skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-        }
-
-        .timeline-skill {
-            color: var(--text-secondary);
-            font-size: 0.75rem;
-        }
-
-        .timeline-skill::before {
-            content: '·';
-            margin-right: 6px;
-            color: var(--text-muted);
-        }
-
-        .timeline-skill:first-child::before {
-            display: none;
-        }
-
-        .timeline-desc {
-            color: var(--text-secondary);
-            font-size: 0.85rem;
-            margin-top: 8px;
-            padding-left: 12px;
-            border-left: 2px solid var(--border);
-        }
-
         /* Inspiration Section */
         .inspiration-grid {
             display: grid;
@@ -609,7 +480,6 @@
         .skill:focus-visible,
         .content-item:focus-visible,
         .inspiration-item:focus-visible,
-        .timeline-item:focus-visible,
         .theme-toggle:focus-visible {
             outline: 2px solid var(--accent);
             outline-offset: 2px;
@@ -663,15 +533,6 @@
             }
             .role {
                 font-size: 1.25rem;
-            }
-            
-            /* Enhanced mobile scroll animations */
-            .timeline-item {
-                transition: opacity 0.5s ease, transform 0.5s ease;
-            }
-            
-            .timeline-item.visible {
-                animation: slideInLeft 0.5s ease forwards;
             }
 
         }
@@ -791,81 +652,6 @@
             </div>
         </section>
 
-        <section class="section">
-            <h3 class="section-title">Experience</h3>
-            
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-header">
-                        <div class="timeline-logo">
-                            <img src="https://www.google.com/s2/favicons?domain=pexa.com.au&sz=64" alt="PEXA" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg, #4f46e5, #7c3aed)'; this.parentElement.innerHTML='P'">
-                        </div>
-                        <p class="timeline-company">PEXA</p>
-                    </div>
-                    <h4 class="timeline-role">Product Owner</h4>
-                    <p class="timeline-period">Nov 2020 — May 2022 · 1 yr 7 mos</p>
-                    <div class="timeline-skills">
-                        <span class="timeline-skill">Product Ownership</span>
-                        <span class="timeline-skill">Agile</span>
-                        <span class="timeline-skill">Digital Property</span>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-header">
-                        <div class="timeline-logo">
-                            <img src="https://www.google.com/s2/favicons?domain=pexa.com.au&sz=64" alt="PEXA" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg, #4f46e5, #7c3aed)'; this.parentElement.innerHTML='P'">
-                        </div>
-                        <p class="timeline-company">PEXA</p>
-                    </div>
-                    <h4 class="timeline-role">Customer Success Manager</h4>
-                    <p class="timeline-period">Jun 2018 — Nov 2020 · 2 yrs 6 mos</p>
-                    <div class="timeline-skills">
-                        <span class="timeline-skill">Account Management</span>
-                        <span class="timeline-skill">Customer Relations</span>
-                        <span class="timeline-skill">Lead Conversion</span>
-                        <span class="timeline-skill">Business Development</span>
-                    </div>
-                    <p class="timeline-desc">Managed customer portfolios of high-value law firms and conveyancing firms. Introduced additional products, converted new leads, and attended/hosted industry events.</p>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-header">
-                        <div class="timeline-logo">
-                            <img src="https://www.google.com/s2/favicons?domain=scoopon.com.au&sz=64" alt="Scoopon" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg, #f59e0b, #ef4444)'; this.parentElement.innerHTML='Sc'">
-                        </div>
-                        <p class="timeline-company">Scoopon</p>
-                    </div>
-                    <h4 class="timeline-role">Risk Advisor</h4>
-                    <p class="timeline-period">Nov 2015 — May 2018 · 2 yrs 7 mos</p>
-                    <div class="timeline-skills">
-                        <span class="timeline-skill">Contract Assessment</span>
-                        <span class="timeline-skill">Risk Analysis</span>
-                        <span class="timeline-skill">Financial Evaluation</span>
-                        <span class="timeline-skill">Vendor Management</span>
-                    </div>
-                    <p class="timeline-desc">Assessed supplier contracts for Scoopon deals. Evaluated financial, legal and reputational risks.</p>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-header">
-                        <div class="timeline-logo"><img src="https://www.google.com/s2/favicons?domain=anz.com.au&sz=64" alt="ANZ" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg, #0d9488, #0891b2)'; this.parentElement.innerHTML='ANZ'"></div>
-                        <p class="timeline-company">ANZ</p>
-                    </div>
-                    <h4 class="timeline-role">Multiple Roles</h4>
-                    <p class="timeline-period">Jun 2013 — Oct 2015 · 2 yrs 5 mos</p>
-                    <div class="timeline-skills">
-                        <span class="timeline-skill">Customer Service</span>
-                        <span class="timeline-skill">Mortgage Processing</span>
-                        <span class="timeline-skill">Lending Disputes</span>
-                        <span class="timeline-skill">Case Management</span>
-                        <span class="timeline-skill">ASIC Compliance</span>
-                        <span class="timeline-skill">Banking Products</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <footer>
             <p>Melbourne, Australia</p>
             <div class="social-links">
@@ -917,12 +703,6 @@
                     }
                 });
             }, observerOptions);
-
-            // Observe timeline items with dynamic stagger delays
-            document.querySelectorAll('.timeline-item').forEach((item, index) => {
-                item.style.transitionDelay = `${index * 0.1}s`;
-                observer.observe(item);
-            });
 
             // Observe inspiration items
             document.querySelectorAll('.inspiration-item').forEach((item, index) => {
