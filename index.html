@@ -3,651 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jeff Wulfsohn — AI Powered Product Leader</title>
-    <meta name="description" content="Jeff Wulfsohn — AI Powered Product Leader based in Melbourne, Australia. Product Manager at Sinch MessageMedia.">
-    <meta property="og:title" content="Jeff Wulfsohn — AI Powered Product Leader">
-    <meta property="og:description" content="Product Manager at Sinch MessageMedia, based in Melbourne, Australia.">
+    <title>Jeff Wulfsohn — Product Manager (AI-pilled)</title>
+    <meta name="description" content="Jeff Wulfsohn — a product manager who treats AI and PM as the same skill: spotting a problem worth solving and shipping something against it. Based in Melbourne, Australia.">
+    <link rel="canonical" href="https://checked0ut.github.io/jeff-personal-site/">
+    <meta property="og:title" content="Jeff Wulfsohn — Product Manager (AI-pilled)">
+    <meta property="og:description" content="A product manager who uses AI to move faster than the org around him, and ships instead of frames. The evidence lives here.">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://checked0ut.github.io/jeff-personal-site/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Jeff Wulfsohn — Product Manager (AI-pilled)">
+    <meta name="twitter:description" content="A product manager who uses AI to move faster than the org around him, and ships instead of frames.">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%2360a5fa'/><stop offset='100%25' stop-color='%23a5b4fc'/></linearGradient></defs><circle cx='50' cy='50' r='50' fill='url(%23g)'/><text x='50' y='55' text-anchor='middle' dominant-baseline='middle' font-family='sans-serif' font-size='36' font-weight='600' fill='white'>JW</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg: #f8fafc;
-            --surface: #ffffff;
-            --surface-hover: #f1f5f9;
-            --border: #e2e8f0;
-            --text: #1e293b;
-            --text-secondary: #64748b;
-            --text-muted: #94a3b8;
-            --accent: #3b82f6;
-            --accent-light: #dbeafe;
-            --gradient-1: #60a5fa;
-            --gradient-2: #a5b4fc;
-            --shadow: rgba(59, 130, 246, 0.1);
-        }
-
-        [data-theme="dark"] {
-            --bg: #0f172a;
-            --surface: #1e293b;
-            --surface-hover: #334155;
-            --border: #334155;
-            --text: #f1f5f9;
-            --text-secondary: #94a3b8;
-            --text-muted: #64748b;
-            --accent: #60a5fa;
-            --accent-light: #1e3a5f;
-            --gradient-1: #3b82f6;
-            --gradient-2: #8b5cf6;
-            --shadow: rgba(0, 0, 0, 0.3);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-            min-height: 100vh;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        .container {
-            max-width: 640px;
-            margin: 0 auto;
-            padding: 80px 24px;
-        }
-
-        /* Theme Toggle */
-        .theme-toggle {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 50%;
-            width: 44px;
-            height: 44px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            transition: all 0.3s ease-in-out;
-            z-index: 100;
-            box-shadow: 0 2px 8px var(--shadow);
-        }
-
-        .theme-toggle:hover {
-            transform: scale(1.1) rotate(5deg);
-            border-color: var(--accent);
-            box-shadow: 0 4px 12px var(--shadow);
-        }
-
-        .theme-toggle .icon {
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .theme-toggle:hover .icon {
-            transform: rotate(15deg);
-        }
-
-        /* Hero Section */
-        .hero {
-            text-align: center;
-            margin-bottom: 64px;
-            animation: fadeIn 0.8s ease;
-        }
-
-        .avatar {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
-            margin: 0 auto 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5rem;
-            font-weight: 600;
-            color: white;
-            box-shadow: 0 8px 32px var(--shadow);
-        }
-
-        .hero h1 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 2.25rem;
-            font-weight: 600;
-            letter-spacing: -0.02em;
-            margin-bottom: 8px;
-            color: var(--text);
-        }
-
-        .hero .tagline {
-            color: var(--text-secondary);
-            font-size: 1.125rem;
-            font-weight: 400;
-        }
-
-        .hero .location {
-            color: var(--text-muted);
-            font-size: 0.875rem;
-            margin-top: 8px;
-        }
-
-        /* Current Role - Highlighted */
-        .current-role {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 32px;
-            margin-bottom: 48px;
-            animation: fadeIn 0.8s ease 0.1s both;
-            transition: all 0.3s ease-in-out;
-            box-shadow: 0 4px 24px var(--shadow);
-        }
-
-        .current-role:hover {
-            transform: translateY(-4px) scale(1.02);
-            box-shadow: 0 16px 40px var(--shadow);
-        }
-
-        .current-role .company-logo {
-            width: 48px;
-            height: 48px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 16px;
-            overflow: hidden;
-            background: white;
-        }
-        
-        .current-role .company-logo img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-
-        .badge {
-            display: inline-block;
-            background: var(--accent-light);
-            color: var(--accent);
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.7rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            margin-bottom: 16px;
-        }
-
-        .company {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            margin-bottom: 4px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .company-logo-small {
-            width: 20px;
-            height: 20px;
-            border-radius: 6px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.6rem;
-            font-weight: 700;
-            color: white;
-        }
-
-        .role {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 4px;
-        }
-
-        .period {
-            color: var(--text-muted);
-            font-size: 0.8rem;
-            margin-bottom: 16px;
-        }
-
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .skill {
-            background: var(--surface-hover);
-            color: var(--text-secondary);
-            padding: 6px 14px;
-            border-radius: 8px;
-            font-size: 0.8rem;
-            font-weight: 500;
-            transition: all 0.2s ease-in-out;
-            border: 1px solid var(--border);
-        }
-
-        .skill:hover {
-            transform: translateY(-2px) scale(1.05);
-            background: var(--accent-light);
-            color: var(--accent);
-            border-color: var(--accent);
-            box-shadow: 0 4px 12px var(--shadow);
-        }
-
-        /* Section Styles */
-        .section {
-            margin-bottom: 48px;
-        }
-
-        .section-title {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            color: var(--text-muted);
-            margin-bottom: 20px;
-            padding-bottom: 12px;
-            border-bottom: 1px solid var(--border);
-        }
-
-        /* Inspiration Section */
-        .inspiration-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-        }
-
-        .inspiration-item {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 16px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            transition: all 0.3s ease;
-            opacity: 0;
-            transform: translateY(16px);
-        }
-
-        .inspiration-item.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .inspiration-item:hover {
-            transform: translateY(-4px) scale(1.02) rotate(5deg);
-            box-shadow: 0 12px 32px var(--shadow);
-        }
-
-        .inspiration-item img {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            object-fit: cover;
-            flex-shrink: 0;
-        }
-
-        .inspiration-info h4 {
-            font-size: 0.95rem;
-            font-weight: 500;
-            margin-bottom: 2px;
-        }
-
-        .inspiration-info p {
-            font-size: 0.75rem;
-            color: var(--text-secondary);
-            line-height: 1.4;
-        }
-
-        /* Value Delivered Section */
-        .value-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-        }
-
-        .value-card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-top-width: 3px;
-            border-top-style: solid;
-            border-radius: 12px;
-            padding: 24px 16px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            gap: 12px;
-            transition: all 0.3s ease;
-            opacity: 0;
-            transform: translateY(16px);
-        }
-
-        .value-card.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .value-card:hover {
-            transform: translateY(-4px) scale(1.02) rotate(5deg);
-            box-shadow: 0 12px 32px var(--shadow);
-        }
-
-        .value-card--blue  { border-top-color: var(--accent); }
-        .value-card--purple { border-top-color: var(--gradient-2); }
-
-        .value-icon {
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.25rem;
-            flex-shrink: 0;
-            box-shadow: 0 4px 12px var(--shadow);
-        }
-
-        .value-title {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: var(--text);
-        }
-
-        .value-desc {
-            font-size: 0.8rem;
-            color: var(--text-secondary);
-            line-height: 1.5;
-        }
-
-        /* Content Section */
-        .content-section {
-            margin-bottom: 32px;
-        }
-
-        .content-section h4 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            margin-bottom: 12px;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-        }
-
-        .content-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .content-item {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 8px 14px;
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-            transition: all 0.2s ease-in-out;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .content-item:hover {
-            transform: translateY(-2px);
-            background: var(--accent-light);
-            color: var(--accent);
-            border-color: var(--accent);
-            box-shadow: 0 4px 12px var(--shadow);
-        }
-
-        .content-item:focus-visible {
-            outline: 2px solid var(--accent);
-            outline-offset: 2px;
-        }
-
-        @media (max-width: 500px) {
-            .inspiration-grid {
-                grid-template-columns: 1fr;
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // Apply saved/system theme before paint to avoid a flash
+        (function () {
+            var s = localStorage.getItem('theme');
+            var d = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (s === 'dark' || (!s && d)) {
+                document.documentElement.setAttribute('data-theme', 'dark');
             }
-            .value-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding-top: 48px;
-            margin-top: 16px;
-            border-top: 1px solid var(--border);
-        }
-
-        footer p {
-            color: var(--text-muted);
-            font-size: 0.85rem;
-        }
-
-        footer a {
-            color: var(--accent);
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
-
-        footer a:hover {
-            color: #4f46e5;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 24px;
-            margin-top: 16px;
-        }
-
-        .social-links a {
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            transition: color 0.2s ease;
-        }
-
-        .social-links a:hover {
-            color: var(--accent);
-        }
-
-        /* Focus styles for accessibility */
-        .skill:focus-visible,
-        .content-item:focus-visible,
-        .inspiration-item:focus-visible,
-        .theme-toggle:focus-visible {
-            outline: 2px solid var(--accent);
-            outline-offset: 2px;
-        }
-
-        /* Animations */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(16px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes slideInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        /* Reduced motion preference */
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-            }
-            html {
-                scroll-behavior: auto;
-            }
-        }
-
-        /* Responsive */
-        @media (max-width: 600px) {
-            .container {
-                padding: 48px 16px;
-            }
-            .hero h1 {
-                font-size: 1.75rem;
-            }
-            .current-role {
-                padding: 24px;
-            }
-            .role {
-                font-size: 1.25rem;
-            }
-
-        }
-    </style>
+        })();
+    </script>
+    <script defer src="main.js"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Jeff Wulfsohn",
+        "jobTitle": "Product Manager",
+        "url": "https://checked0ut.github.io/jeff-personal-site/",
+        "worksFor": { "@type": "Organization", "name": "Sinch" },
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Melbourne",
+            "addressCountry": "Australia"
+        },
+        "sameAs": ["https://linkedin.com/in/jeff-wulfsohn"]
+    }
+    </script>
 </head>
 <body>
-    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Switch to dark mode">
-        <span class="icon">🌙</span>
-    </button>
-    <div class="container">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a class="brand" href="./">Jeff Wulfsohn</a>
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Switch to dark mode">
+                <span class="icon">🌙</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="container" id="main">
         <section class="hero">
             <div class="avatar">JW</div>
             <h1>Jeff Wulfsohn</h1>
-            <p class="tagline">AI Powered Product Leader</p>
+            <p class="tagline">AI-pilled human (also a PM)</p>
             <p class="location">📍 Melbourne, Australia</p>
+            <div class="lead">
+                <p>I'm Jeff. I do product management at a B2B SaaS company by day, build small AI tools at night, and spend a lot of time thinking about why most PMs treat those as separate skill sets when they're really the same one. The skill is spotting a problem worth solving and shipping something against it.</p>
+                <p>Most PMs at my level have drifted from the business. The craft got better, the frameworks got prettier, the P&amp;L got further away. I think that's backwards. A PM's job is to make the business money by making customers' lives better, and the PMs who'll matter over the next decade are the ones who can hold both ends of that sentence at once, use AI to move faster than the org around them, and ship instead of frame. This site is the evidence that I work that way.</p>
+            </div>
         </section>
 
-        <section class="current-role">
+        <section class="current-role" aria-label="Current role">
             <div class="company-logo">
                 <img src="https://www.google.com/s2/favicons?domain=sinch.com&sz=64" alt="Sinch" onerror="this.style.display='none'">
             </div>
             <div class="badge">Current</div>
-            <p class="company">Sinch MessageMedia</p>
+            <p class="company">Sinch</p>
             <h2 class="role">Product Manager</h2>
-            <p class="period">Oct 2022 — Present · 3 yrs 6 mos</p>
             <div class="skills">
                 <span class="skill">Product Strategy</span>
                 <span class="skill">SaaS</span>
-                <span class="skill">Customer Engagement</span>
+                <span class="skill">Billing &amp; Monetisation</span>
                 <span class="skill">API Products</span>
                 <span class="skill">Growth</span>
             </div>
         </section>
 
         <section class="section">
-            <h3 class="section-title">Value Delivered</h3>
-            <div class="value-grid">
-                <div class="value-card value-card--blue">
-                    <div class="value-icon">💰</div>
-                    <h4 class="value-title">Monetisation Guide</h4>
-                    <p class="value-desc">Created a comprehensive monetisation guide for the Product team to accelerate revenue decision-making.</p>
-                </div>
-                <div class="value-card value-card--purple">
-                    <div class="value-icon">🤖</div>
-                    <h4 class="value-title">AI Slack Channel</h4>
-                    <p class="value-desc">Founded an internal AI forum for co-learning and sharing real-world use cases across the organisation.</p>
-                </div>
+            <h2 class="section-title">Right now</h2>
+            <div class="right-now">
+                <p>I'm leading billing and monetisation work at a B2B SaaS company through a major platform migration, helping colleagues across the business get genuinely useful at AI tooling, and building the next module of Dumbledore. It's a proactive calendar conflict identifier to help my wife and I plan our time more easily.</p>
+                <span class="update-note">I update this section every month or so.</span>
             </div>
         </section>
 
         <section class="section">
-            <h3 class="section-title">People Who Inspire Me</h3>
-            
+            <h2 class="section-title">Things I've built</h2>
+            <div class="project-grid">
+                <a class="project-card" href="projects/ai-for-pms/">
+                    <span class="project-card__title">AI for PMs, in practice</span>
+                    <span class="project-card__desc">An ongoing thing rather than a one-off project. I publish what I figure out about applied AI for PM work, and run sessions to bring colleagues along. Latest: a writeup on a month with Claude Code as a PM, and an in-person session with the broader PM team.</span>
+                    <span class="project-card__proves">Proves: I close the loop between learning, doing, and sharing.</span>
+                    <span class="read-more">Read more →</span>
+                </a>
+
+                <a class="project-card" href="projects/board-of-advisors/">
+                    <span class="project-card__title">Board of Advisors</span>
+                    <span class="project-card__desc">An AI agent I built in Gemini Enterprise to pressure-test product decisions against the perspectives of operators I respect. A faster, cheaper second opinion on the work that matters.</span>
+                    <span class="project-card__proves">Proves: I use AI to do my PM job better, not just to ship AI features.</span>
+                    <span class="read-more">Read more →</span>
+                </a>
+
+                <a class="project-card" href="projects/dumbledore/">
+                    <span class="project-card__title">Dumbledore</span>
+                    <span class="project-card__desc">A personal AI agent that runs the household admin I'd rather not. Meal planning, grocery automation, weekend planning, gift radar, and a few other modules I keep adding.</span>
+                    <span class="project-card__proves">Proves: I use AI to compress the parts of life nobody automates.</span>
+                    <span class="read-more">Read more →</span>
+                </a>
+
+                <a class="project-card" href="projects/this-site/">
+                    <span class="project-card__title">This site</span>
+                    <span class="project-card__desc">Built with Claude Code. The thesis above isn't a static claim, it's something I update as the work changes. If you're reading this in six months and it still says exactly the same thing, something's gone wrong.</span>
+                    <span class="project-card__proves">Proves: I do what I tell other PMs to do.</span>
+                    <span class="read-more">Read more →</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">People who inspire me</h2>
             <div class="inspiration-grid">
-                <a href="https://www.lennysnewsletter.com" target="_blank" class="inspiration-item">
-                    <img src="https://www.google.com/s2/favicons?domain=lennysnewsletter.com&sz=128" alt="Lenny" loading="lazy">
+                <a href="https://www.lennysnewsletter.com" target="_blank" rel="noopener" class="inspiration-item">
+                    <img src="https://www.google.com/s2/favicons?domain=lennysnewsletter.com&sz=128" alt="" loading="lazy">
                     <div class="inspiration-info">
                         <h4>Lenny Rachitsky</h4>
                         <p>Creator of Lenny's Newsletter, sharing deep research on product, growth, and career advice.</p>
                     </div>
                 </a>
 
-                <a href="https://www.talraviv.co/" target="_blank" class="inspiration-item">
-                    <img src="https://www.google.com/s2/favicons?domain=talraviv.co&sz=128" alt="Tal Raviv" loading="lazy">
+                <a href="https://www.talraviv.co/" target="_blank" rel="noopener" class="inspiration-item">
+                    <img src="https://www.google.com/s2/favicons?domain=talraviv.co&sz=128" alt="" loading="lazy">
                     <div class="inspiration-info">
                         <h4>Tal Raviv</h4>
-                        <p>Tech investor and operator sharing insights on building successful startups.</p>
+                        <p>Product leader and writer on the craft, tools, and habits of effective PMs.</p>
                     </div>
                 </a>
 
-                <a href="https://www.linkedin.com/in/adir-shiffman?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="inspiration-item">
-                    <img src="https://www.google.com/s2/favicons?domain=linkedin.com&sz=128" alt="Adir Shiffman" loading="lazy">
+                <a href="https://www.linkedin.com/in/adir-shiffman" target="_blank" rel="noopener" class="inspiration-item">
+                    <img src="https://www.google.com/s2/favicons?domain=linkedin.com&sz=128" alt="" loading="lazy">
                     <div class="inspiration-info">
                         <h4>Adir Shiffman</h4>
-                        <p>Serial entrepreneur and author focused on startup growth and leadership.</p>
+                        <p>Serial entrepreneur and chairman with sharp instincts on startups and commercial strategy.</p>
                     </div>
                 </a>
 
-                <a href="https://www.linkedin.com/in/adam-schwab-64b439a?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="inspiration-item">
-                    <img src="https://www.google.com/s2/favicons?domain=linkedin.com&sz=128" alt="Adam Schwab" loading="lazy">
+                <a href="https://www.linkedin.com/in/adam-schwab-64b439a" target="_blank" rel="noopener" class="inspiration-item">
+                    <img src="https://www.google.com/s2/favicons?domain=linkedin.com&sz=128" alt="" loading="lazy">
                     <div class="inspiration-info">
                         <h4>Adam Schwab</h4>
-                        <p>Journalist and analyst covering tech, startups, and business strategy.</p>
+                        <p>Founder and commercial operator covering tech, travel, and business strategy.</p>
                     </div>
                 </a>
             </div>
         </section>
 
         <section class="section">
-            <h3 class="section-title">Content I'm Consuming</h3>
-            
+            <h2 class="section-title">Content I'm consuming</h2>
+
             <div class="content-section">
-                <h4>Spotify</h4>
+                <h4><img src="https://www.google.com/s2/favicons?domain=open.spotify.com&sz=64" alt="" loading="lazy"> Spotify</h4>
                 <div class="content-grid">
-                    <a href="https://open.spotify.com/show/764YvkB2GhdoyyWTmZWlFw" target="_blank" class="content-item">The Contrarians</a>
-                    <a href="https://open.spotify.com/show/2dR1MUZEHCOnz1LVfNac0j" target="_blank" class="content-item">Lenny's Podcast</a>
-                    <a href="https://open.spotify.com/show/3DpAbiHuflIjaQFjbHbQR9" target="_blank" class="content-item">Behind the Craft</a>
-                    <a href="https://open.spotify.com/show/2VRS1IJCTn2Nlkg33ZVfkM" target="_blank" class="content-item">99% Invisible</a>
+                    <a href="https://open.spotify.com/show/764YvkB2GhdoyyWTmZWlFw" target="_blank" rel="noopener" class="content-item">The Contrarians</a>
+                    <a href="https://open.spotify.com/show/2dR1MUZEHCOnz1LVfNac0j" target="_blank" rel="noopener" class="content-item">Lenny's Podcast</a>
+                    <a href="https://open.spotify.com/show/3DpAbiHuflIjaQFjbHbQR9" target="_blank" rel="noopener" class="content-item">Behind the Craft</a>
+                    <a href="https://open.spotify.com/show/2VRS1IJCTn2Nlkg33ZVfkM" target="_blank" rel="noopener" class="content-item">99% Invisible</a>
                 </div>
             </div>
-            
+
             <div class="content-section">
-                <h4>Newsletters</h4>
+                <h4><span class="label-icon" aria-hidden="true">✉️</span> Newsletters</h4>
                 <div class="content-grid">
-                    <a href="https://www.lennysnewsletter.com" target="_blank" class="content-item">Lenny's</a>
-                    <a href="https://www.lennysnewsletter.com/p/tldr" target="_blank" class="content-item">TL:DR</a>
+                    <a href="https://www.lennysnewsletter.com" target="_blank" rel="noopener" class="content-item">Lenny's</a>
+                    <a href="https://www.lennysnewsletter.com/p/tldr" target="_blank" rel="noopener" class="content-item">TL:DR</a>
                 </div>
             </div>
-            
+
             <div class="content-section">
-                <h4>YouTube</h4>
+                <h4><img src="https://www.google.com/s2/favicons?domain=youtube.com&sz=64" alt="" loading="lazy"> YouTube</h4>
                 <div class="content-grid">
-                    <a href="https://www.youtube.com/@mreflow" target="_blank" class="content-item">Matt Wolfe</a>
-                    <a href="https://www.youtube.com/@growproduct" target="_blank" class="content-item">Aakash Gupta</a>
-                    <a href="https://www.youtube.com/@Stanford" target="_blank" class="content-item">Startup Ideas Podcast</a>
+                    <a href="https://www.youtube.com/@mreflow" target="_blank" rel="noopener" class="content-item">Matt Wolfe</a>
+                    <a href="https://www.youtube.com/@growproduct" target="_blank" rel="noopener" class="content-item">Aakash Gupta</a>
+                    <a href="https://www.youtube.com/@Stanford" target="_blank" rel="noopener" class="content-item">Startup Ideas Podcast</a>
                 </div>
             </div>
         </section>
@@ -655,85 +198,9 @@
         <footer>
             <p>Melbourne, Australia</p>
             <div class="social-links">
-                <a href="https://linkedin.com/in/jeff-wulfsohn" target="_blank">LinkedIn</a>
+                <a href="https://linkedin.com/in/jeff-wulfsohn" target="_blank" rel="noopener">LinkedIn</a>
             </div>
         </footer>
-    </div>
-
-    <script>
-        // Theme toggle
-        function toggleTheme() {
-            const html = document.documentElement;
-            const toggle = document.querySelector('.theme-toggle');
-            const btn = toggle.querySelector('.icon');
-            const current = html.getAttribute('data-theme');
-            const next = current === 'dark' ? 'light' : 'dark';
-
-            html.setAttribute('data-theme', next);
-            btn.textContent = next === 'dark' ? '☀️' : '🌙';
-            toggle.setAttribute('aria-label', next === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
-            localStorage.setItem('theme', next);
-        }
-
-        // Load saved theme
-        (function() {
-            const saved = localStorage.getItem('theme');
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const theme = saved || (prefersDark ? 'dark' : 'light');
-
-            if (theme === 'dark') {
-                document.documentElement.setAttribute('data-theme', 'dark');
-                document.querySelector('.theme-toggle .icon').textContent = '☀️';
-                document.querySelector('.theme-toggle').setAttribute('aria-label', 'Switch to light mode');
-            }
-        })();
-
-        // Scroll animations using Intersection Observer
-        document.addEventListener('DOMContentLoaded', function() {
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.1
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, observerOptions);
-
-            // Observe inspiration items
-            document.querySelectorAll('.inspiration-item').forEach((item, index) => {
-                item.style.transitionDelay = `${index * 0.1}s`;
-                observer.observe(item);
-            });
-
-            document.querySelectorAll('.value-card').forEach((item, index) => {
-                item.style.transitionDelay = `${index * 0.1}s`;
-                observer.observe(item);
-            });
-
-            // Parallax-like effect on scroll for avatar
-            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            if (!prefersReducedMotion) {
-                const avatar = document.querySelector('.avatar');
-                let ticking = false;
-                window.addEventListener('scroll', () => {
-                    if (!ticking) {
-                        requestAnimationFrame(() => {
-                            const scrolled = window.pageYOffset;
-                            if (scrolled < 100) {
-                                avatar.style.transform = `translateY(${scrolled * 0.1}px)`;
-                            }
-                            ticking = false;
-                        });
-                        ticking = true;
-                    }
-                }, { passive: true });
-            }
-        });
-    </script>
+    </main>
 </body>
 </html>

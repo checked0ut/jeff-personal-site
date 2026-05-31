@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dumbledore — Jeff Wulfsohn</title>
+    <meta name="description" content="A personal AI agent that runs the household admin I'd rather not — a solid-foods planner and a calendar conflict scanner are the modules earning their keep right now.">
+    <link rel="canonical" href="https://checked0ut.github.io/jeff-personal-site/projects/dumbledore/">
+    <meta property="og:title" content="Dumbledore — Jeff Wulfsohn">
+    <meta property="og:description" content="A personal AI agent that runs the household admin I'd rather not.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://checked0ut.github.io/jeff-personal-site/projects/dumbledore/">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%2360a5fa'/><stop offset='100%25' stop-color='%23a5b4fc'/></linearGradient></defs><circle cx='50' cy='50' r='50' fill='url(%23g)'/><text x='50' y='55' text-anchor='middle' dominant-baseline='middle' font-family='sans-serif' font-size='36' font-weight='600' fill='white'>JW</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css">
+    <script>
+        (function () {
+            var s = localStorage.getItem('theme');
+            var d = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (s === 'dark' || (!s && d)) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+    <script defer src="../../main.js"></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a class="brand" href="../../">Jeff Wulfsohn</a>
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Switch to dark mode">
+                <span class="icon">🌙</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="container" id="main">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="../../">Home</a><span class="sep">/</span><span class="current">Dumbledore</span>
+        </nav>
+
+        <article class="prose">
+            <header class="article-header">
+                <h1>Dumbledore</h1>
+                <p class="article-dek">A personal AI agent that runs the household admin I'd rather not.</p>
+            </header>
+
+            <h2>The itch</h2>
+            <p>Our son was born in late 2025. The volume of household decisions went up sharply, and the time available to make them went down sharply. I wanted to test whether a personal AI agent could pick up the parts of household admin that are repetitive, low-stakes, and easy to forget.</p>
+
+            <h2>What's actually running, today</h2>
+            <p><span class="lead-in">Solid foods module.</span> Every evening Dumbledore suggests what Joey should eat the next day, including how we're sequencing allergen introductions. On Fridays it tells us what's coming up the following week so the items go on the grocery list before the shop. This is the module that runs every day and gets used every day.</p>
+            <p><span class="lead-in">Calendar conflict scanner.</span> Once a week it looks three weeks ahead at my calendar and my wife's calendar. When it finds an overlap where we both have something on, it flags it so we can figure out who's looking after our son before the conflict becomes a problem.</p>
+            <p>Other modules exist (gift radar, weekend planning, meal planning, monthly spend summary) at varying levels of maturity. The two above are the ones earning their keep right now.</p>
+
+            <h2>What I learned</h2>
+            <p>Two things most people would get wrong if they tried to build this. One: starting too big. The temptation is to spec the whole household operating system on day one. The version that actually works started with a single module (solid foods) and grew from there. Two: underutilising what the agent can do. There's hype in both directions, people either expect magic or assume it can't do much. The reality is in the middle and only becomes visible by shipping a tiny thing, using it for two weeks, then deciding what to add.</p>
+        </article>
+
+        <footer>
+            <p>Melbourne, Australia</p>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/jeff-wulfsohn" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>

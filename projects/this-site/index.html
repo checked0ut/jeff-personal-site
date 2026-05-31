@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This site — Jeff Wulfsohn</title>
+    <meta name="description" content="Built with Claude Code, in thirty-minute sprints. What I learned about using Claude Code on a long-lived codebase, and why a clear CLAUDE.md is the unlock.">
+    <link rel="canonical" href="https://checked0ut.github.io/jeff-personal-site/projects/this-site/">
+    <meta property="og:title" content="This site — Jeff Wulfsohn">
+    <meta property="og:description" content="Built with Claude Code, in patches. The site updates as the work changes.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://checked0ut.github.io/jeff-personal-site/projects/this-site/">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%2360a5fa'/><stop offset='100%25' stop-color='%23a5b4fc'/></linearGradient></defs><circle cx='50' cy='50' r='50' fill='url(%23g)'/><text x='50' y='55' text-anchor='middle' dominant-baseline='middle' font-family='sans-serif' font-size='36' font-weight='600' fill='white'>JW</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css">
+    <script>
+        (function () {
+            var s = localStorage.getItem('theme');
+            var d = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (s === 'dark' || (!s && d)) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+    <script defer src="../../main.js"></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a class="brand" href="../../">Jeff Wulfsohn</a>
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Switch to dark mode">
+                <span class="icon">🌙</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="container" id="main">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="../../">Home</a><span class="sep">/</span><span class="current">This site</span>
+        </nav>
+
+        <article class="prose">
+            <header class="article-header">
+                <h1>This site</h1>
+                <p class="article-dek">Built with Claude Code, in patches.</p>
+            </header>
+
+            <h2>The itch</h2>
+            <p>The thesis on the homepage isn't worth much without evidence. The evidence existed but lived in a dozen disconnected places. The site is the home that pulls it together.</p>
+
+            <h2>How it got built</h2>
+            <p>In thirty-minute sprints, mostly. With a seven-month-old at home, there is no clean weekend to sit down and build something end to end. There are patches of evenings, the half hour before bedtime, the gap between a nap starting and a nap ending. So the workflow had to match the time available, not the other way around.</p>
+
+            <h2>What I learned about Claude Code on a long-lived codebase</h2>
+            <p>Most AI coding content is about one-shot artifacts. A site you maintain is a different problem. The thing that mattered most was a clear CLAUDE.md that captured my preferences (accuracy over speed, plain language, one or two clarifying questions before complex tasks, no commits without explicit approval) so that every short session picked up where the last one left off without me having to re-explain myself. The CLAUDE.md is the unlock. Without it, thirty-minute sprints would have been thirty minutes of re-establishing context. With it, thirty minutes is enough to actually ship something.</p>
+
+            <h2>What's next</h2>
+            <p>The site updates as the work changes. If the homepage looks different in six months, that's the point.</p>
+        </article>
+
+        <footer>
+            <p>Melbourne, Australia</p>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/jeff-wulfsohn" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>
