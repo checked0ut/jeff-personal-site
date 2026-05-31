@@ -368,12 +368,10 @@ body {
     flex-grow: 1;
 }
 
-.project-card__proves {
-    font-size: 0.78rem;
+.project-card__note {
+    font-size: 0.8rem;
     font-style: italic;
     color: var(--text-muted);
-    border-left: 2px solid var(--accent);
-    padding-left: 10px;
     line-height: 1.45;
 }
 
