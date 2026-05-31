@@ -197,9 +197,9 @@ body {
 .current-role {
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 20px;
-    padding: 32px;
-    margin-bottom: 48px;
+    border-radius: 16px;
+    padding: 22px;
+    margin-bottom: 28px;
     animation: fadeIn 0.8s ease 0.1s both;
     transition: all 0.3s ease-in-out;
     box-shadow: 0 4px 24px var(--shadow);
@@ -210,6 +210,19 @@ body {
     box-shadow: 0 16px 40px var(--shadow);
 }
 
+.role-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+}
+
+.role-identity {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
 .current-role .company-logo {
     width: 48px;
     height: 48px;
@@ -217,9 +230,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 16px;
     overflow: hidden;
     background: white;
+    flex-shrink: 0;
 }
 
 .current-role .company-logo img {
@@ -245,17 +258,15 @@ body {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 0.9rem;
     color: var(--text-muted);
-    margin-bottom: 4px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    margin-bottom: 0;
 }
 
 .role {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 600;
-    margin-bottom: 16px;
+    line-height: 1.2;
+    margin-bottom: 0;
 }
 
 .skills {
@@ -676,10 +687,10 @@ footer p {
         font-size: 1.75rem;
     }
     .current-role {
-        padding: 24px;
+        padding: 18px;
     }
     .role {
-        font-size: 1.25rem;
+        font-size: 1.2rem;
     }
     .article-header h1 {
         font-size: 1.6rem;
