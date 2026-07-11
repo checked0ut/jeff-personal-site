@@ -137,7 +137,7 @@ body::after {
 .container {
     max-width: 680px;
     margin: 0 auto;
-    padding: 56px 24px 88px;
+    padding: 56px 24px 72px;
 }
 
 section[id] {
@@ -714,14 +714,61 @@ section[id] {
     opacity: 1;
 }
 
+.project-card__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 4px;
+}
+
+.project-glyph {
+    width: 26px;
+    height: 26px;
+    color: var(--accent);
+    flex-shrink: 0;
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.project-card:hover .project-glyph {
+    transform: translateY(-2px) rotate(-6deg) scale(1.08);
+}
+
+.project-chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 10px;
+    border: 1px solid var(--border-strong);
+    border-radius: 999px;
+    font-size: 0.64rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    white-space: nowrap;
+    transition: color 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
+}
+
+.project-card:hover .project-chip {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: var(--accent-light);
+}
+
 .project-card__title {
     font-family: var(--font-display);
     font-optical-sizing: auto;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     font-weight: 600;
     letter-spacing: -0.01em;
     color: var(--text);
 }
+
+/* Card title morphs into the article heading (Chromium) */
+.vt-ai-for-pms { view-transition-name: title-ai-for-pms; }
+.vt-board-of-advisors { view-transition-name: title-board-of-advisors; }
+.vt-dumbledore { view-transition-name: title-dumbledore; }
+.vt-this-site { view-transition-name: title-this-site; }
 
 .project-card__desc {
     font-size: 0.88rem;
@@ -1046,11 +1093,95 @@ section[id] {
     background: var(--accent-light);
     border: 1px dashed var(--accent);
     border-radius: 12px;
-    padding: 16px 18px;
+    padding: 14px 18px 16px;
     color: var(--text-secondary);
     font-size: 0.9rem;
     font-style: italic;
     margin-bottom: 16px;
+}
+
+.placeholder-note::before {
+    content: "Coming soon";
+    display: block;
+    font-family: var(--font-body);
+    font-style: normal;
+    font-size: 0.66rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    margin-bottom: 6px;
+}
+
+/* Reading time (computed and injected by main.js) */
+.reading-time {
+    margin-top: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.reading-time::before {
+    content: "";
+    width: 18px;
+    height: 1px;
+    background: var(--accent);
+}
+
+/* Prev/next project pager on article pages */
+.project-pager {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 56px;
+}
+
+.pager-link {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 18px 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    text-decoration: none;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.pager-link:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent);
+    box-shadow: var(--shadow-md);
+}
+
+.pager-next {
+    text-align: right;
+    align-items: flex-end;
+}
+
+.pager-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+}
+
+.pager-title {
+    font-family: var(--font-display);
+    font-optical-sizing: auto;
+    font-size: 1.02rem;
+    font-weight: 600;
+    color: var(--text);
+    transition: color 0.25s ease;
+}
+
+.pager-link:hover .pager-title {
+    color: var(--accent);
 }
 
 /* Reading progress bar (injected by JS on article pages) */
@@ -1104,16 +1235,17 @@ section[id] {
 }
 
 /* ============================================================
-   Footer
+   Footer (site-level landmark, outside <main>)
    ============================================================ */
-footer {
+.site-footer {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 40px 24px 64px;
     text-align: center;
-    padding-top: 48px;
-    margin-top: 16px;
     border-top: 1px solid var(--border);
 }
 
-footer p {
+.site-footer p {
     color: var(--text-muted);
     font-size: 0.85rem;
 }
@@ -1288,5 +1420,14 @@ button:focus-visible,
 
     .inspiration-grid {
         grid-template-columns: 1fr;
+    }
+
+    .project-pager {
+        grid-template-columns: 1fr;
+    }
+
+    .pager-next {
+        text-align: left;
+        align-items: flex-start;
     }
 }

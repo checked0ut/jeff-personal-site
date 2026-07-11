@@ -255,6 +255,21 @@
     }
 
     /* ------------------------------------------------------------
+       Reading time on article pages
+       ------------------------------------------------------------ */
+    function initReadingTime() {
+        var article = document.querySelector('article.prose');
+        var dek = document.querySelector('.article-dek');
+        if (!article || !dek) return;
+        var words = article.textContent.trim().split(/\s+/).length;
+        var minutes = Math.max(1, Math.round(words / 200));
+        var el = document.createElement('p');
+        el.className = 'reading-time';
+        el.textContent = minutes + ' min read';
+        dek.insertAdjacentElement('afterend', el);
+    }
+
+    /* ------------------------------------------------------------
        Reading progress bar on article pages
        ------------------------------------------------------------ */
     function initProgressBar() {
@@ -316,6 +331,7 @@
         initSpotlight();
         initParallax();
         initContentTabs();
+        initReadingTime();
         initProgressBar();
         initBackToTop();
     });
