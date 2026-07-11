@@ -671,6 +671,21 @@ section[id] {
     font-style: italic;
 }
 
+/* Deploy-time freshness stamp (see .github/scripts/right_now_updated.py) */
+.right-now .updated-stamp {
+    display: block;
+    margin-top: 14px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+}
+
+.right-now .updated-stamp + .update-note {
+    margin-top: 3px;
+}
+
 /* ============================================================
    Things I've built
    ============================================================ */

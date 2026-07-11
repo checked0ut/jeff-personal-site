@@ -24,6 +24,19 @@
             try { localStorage.setItem('theme', next); } catch (e) { /* private mode */ }
             syncToggle(toggle);
         });
+
+        // Follow live OS theme changes unless the user chose manually
+        var media = window.matchMedia('(prefers-color-scheme: dark)');
+        var onSchemeChange = function (e) {
+            var stored = null;
+            try { stored = localStorage.getItem('theme'); } catch (err) { /* private mode */ }
+            if (stored) return;
+            document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+            syncToggle(toggle);
+        };
+        if (media.addEventListener) {
+            media.addEventListener('change', onSchemeChange);
+        }
     }
 
     /* ------------------------------------------------------------
@@ -255,6 +268,26 @@
     }
 
     /* ------------------------------------------------------------
+       "Right now" freshness stamp (data-updated is injected by the
+       deploy workflow from git history; absent in local dev)
+       ------------------------------------------------------------ */
+    function initFreshness() {
+        var el = document.querySelector('.right-now[data-updated]');
+        if (!el) return;
+        var note = el.querySelector('.update-note');
+        var parts = (el.getAttribute('data-updated') || '').split('-');
+        if (!note || parts.length !== 3) return;
+        var months = ['January', 'February', 'March', 'April', 'May', 'June',
+            'July', 'August', 'September', 'October', 'November', 'December'];
+        var month = months[parseInt(parts[1], 10) - 1];
+        if (!month) return;
+        var span = document.createElement('span');
+        span.className = 'updated-stamp';
+        span.textContent = 'Last updated ' + month + ' ' + parts[0];
+        note.insertAdjacentElement('beforebegin', span);
+    }
+
+    /* ------------------------------------------------------------
        Reading time on article pages
        ------------------------------------------------------------ */
     function initReadingTime() {
@@ -331,6 +364,7 @@
         initSpotlight();
         initParallax();
         initContentTabs();
+        initFreshness();
         initReadingTime();
         initProgressBar();
         initBackToTop();

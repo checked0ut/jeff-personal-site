@@ -9,6 +9,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Stamp "Right now" freshness date
+        run: |
+          DATE=$(python3 .github/scripts/right_now_updated.py)
+          echo "Right now last changed: $DATE"
+          sed -i "s/<div class=\"right-now\">/<div class=\"right-now\" data-updated=\"$DATE\">/" index.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
