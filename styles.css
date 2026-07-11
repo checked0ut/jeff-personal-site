@@ -1,27 +1,51 @@
 /* ============================================================
-   Design tokens
+   Self-hosted fonts (latin subsets, variable)
+   ============================================================ */
+@font-face {
+    font-family: 'Fraunces Variable';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 100 900;
+    src: url('assets/fonts/fraunces-latin-standard-normal.woff2') format('woff2-variations');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Inter Variable';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 100 900;
+    src: url('assets/fonts/inter-latin-wght-normal.woff2') format('woff2-variations');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* ============================================================
+   Design tokens — warm paper & ink, one confident accent
    ============================================================ */
 :root {
-    --bg: #f6f7f9;
-    --surface: #ffffff;
-    --surface-hover: #f1f4f8;
-    --border: #e4e8ee;
-    --border-strong: #d4dae3;
-    --text: #0f172a;
-    --text-secondary: #46556b;
-    --text-muted: #5f7189;
-    --accent: #4f46e5;
-    --accent-strong: #4338ca;
-    --accent-light: #eef2ff;
-    --gradient-1: #6366f1;
-    --gradient-2: #0ea5e9;
-    --header-bg: rgba(246, 247, 249, 0.82);
-    --glow-1: rgba(99, 102, 241, 0.1);
-    --glow-2: rgba(14, 165, 233, 0.08);
-    --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
-    --shadow-md: 0 1px 2px rgba(15, 23, 42, 0.04), 0 8px 24px -12px rgba(15, 23, 42, 0.18);
-    --shadow-lg: 0 2px 4px rgba(15, 23, 42, 0.04), 0 20px 44px -16px rgba(15, 23, 42, 0.22);
-    --spot: rgba(99, 102, 241, 0.08);
+    --font-display: 'Fraunces Variable', Georgia, 'Times New Roman', serif;
+    --font-body: 'Inter Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --bg: #faf8f5;
+    --surface: #fffefc;
+    --surface-hover: #f3efe9;
+    --border: #e8e2d9;
+    --border-strong: #d8d0c3;
+    --text: #1c1a17;
+    --text-secondary: #57514a;
+    --text-muted: #6b6257;
+    --accent: #c2410c;
+    --accent-strong: #9a3412;
+    --accent-light: #fbeee4;
+    --gradient-1: #c2410c;
+    --gradient-2: #d97706;
+    --header-bg: rgba(250, 248, 245, 0.85);
+    --glow-1: rgba(194, 65, 12, 0.06);
+    --glow-2: rgba(217, 119, 6, 0.05);
+    --shadow-sm: 0 1px 2px rgba(43, 36, 26, 0.06);
+    --shadow-md: 0 1px 2px rgba(43, 36, 26, 0.05), 0 8px 24px -12px rgba(43, 36, 26, 0.2);
+    --shadow-lg: 0 2px 4px rgba(43, 36, 26, 0.05), 0 20px 44px -16px rgba(43, 36, 26, 0.25);
+    --spot: rgba(217, 119, 6, 0.08);
+    --ghost: rgba(28, 26, 23, 0.14);
     --radius: 16px;
     --radius-sm: 10px;
     --header-h: 64px;
@@ -29,26 +53,27 @@
 }
 
 [data-theme="dark"] {
-    --bg: #0b1120;
-    --surface: #101a30;
-    --surface-hover: #1a2440;
-    --border: #223048;
-    --border-strong: #2e3f5c;
-    --text: #eef2f8;
-    --text-secondary: #a7b4c8;
-    --text-muted: #8b9ab1;
-    --accent: #a5b4fc;
-    --accent-strong: #c7d2fe;
-    --accent-light: rgba(99, 102, 241, 0.16);
-    --gradient-1: #818cf8;
-    --gradient-2: #38bdf8;
-    --header-bg: rgba(11, 17, 32, 0.82);
-    --glow-1: rgba(99, 102, 241, 0.16);
-    --glow-2: rgba(56, 189, 248, 0.1);
-    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35);
-    --shadow-md: 0 1px 2px rgba(0, 0, 0, 0.3), 0 10px 28px -12px rgba(0, 0, 0, 0.55);
-    --shadow-lg: 0 2px 4px rgba(0, 0, 0, 0.3), 0 24px 48px -16px rgba(0, 0, 0, 0.6);
-    --spot: rgba(129, 140, 248, 0.12);
+    --bg: #141210;
+    --surface: #1d1a16;
+    --surface-hover: #27231e;
+    --border: #322d26;
+    --border-strong: #453e34;
+    --text: #f2ede5;
+    --text-secondary: #beb4a6;
+    --text-muted: #9c9285;
+    --accent: #fdba74;
+    --accent-strong: #fed7aa;
+    --accent-light: rgba(251, 146, 60, 0.14);
+    --gradient-1: #fb923c;
+    --gradient-2: #fbbf24;
+    --header-bg: rgba(20, 18, 16, 0.85);
+    --glow-1: rgba(251, 146, 60, 0.07);
+    --glow-2: rgba(251, 191, 36, 0.05);
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 1px 2px rgba(0, 0, 0, 0.35), 0 10px 28px -12px rgba(0, 0, 0, 0.55);
+    --shadow-lg: 0 2px 4px rgba(0, 0, 0, 0.35), 0 24px 48px -16px rgba(0, 0, 0, 0.6);
+    --spot: rgba(251, 146, 60, 0.1);
+    --ghost: rgba(242, 237, 229, 0.12);
     color-scheme: dark;
 }
 
@@ -71,7 +96,7 @@ html {
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: var(--font-body);
     background: var(--bg);
     color: var(--text);
     line-height: 1.65;
@@ -90,6 +115,18 @@ body::before {
     background:
         radial-gradient(56rem 32rem at 15% -5%, var(--glow-1), transparent 60%),
         radial-gradient(48rem 28rem at 90% 10%, var(--glow-2), transparent 60%);
+}
+
+/* Barely-there paper grain */
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    pointer-events: none;
+    opacity: 0.028;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='128' height='128'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='128' height='128' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 128px 128px;
 }
 
 ::selection {
@@ -170,7 +207,8 @@ section[id] {
 }
 
 .brand {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: var(--font-display);
+    font-optical-sizing: auto;
     font-weight: 600;
     font-size: 1.02rem;
     color: var(--text);
@@ -337,28 +375,29 @@ section[id] {
 }
 
 /* ============================================================
-   Hero
+   Hero — left-aligned, editorial
    ============================================================ */
 .hero {
-    text-align: center;
-    margin-bottom: 44px;
+    text-align: left;
+    margin: 24px 0 56px;
     animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .avatar {
-    width: 104px;
-    height: 104px;
+    width: 76px;
+    height: 76px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
-    margin: 0 auto 24px;
+    background: var(--text);
+    margin: 0 0 28px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 2.4rem;
-    font-weight: 600;
-    color: white;
-    box-shadow: 0 10px 32px -8px rgba(79, 70, 229, 0.45);
+    font-family: var(--font-display);
+    font-optical-sizing: auto;
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: var(--bg);
+    box-shadow: var(--shadow-md);
     position: relative;
     will-change: transform;
 }
@@ -369,40 +408,64 @@ section[id] {
     inset: -6px;
     border-radius: 50%;
     border: 1px solid var(--border-strong);
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 .hero h1 {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: clamp(2.1rem, 4vw + 1rem, 2.85rem);
-    font-weight: 700;
-    letter-spacing: -0.03em;
-    line-height: 1.1;
-    margin-bottom: 10px;
+    font-family: var(--font-display);
+    font-optical-sizing: auto;
+    font-size: clamp(2.6rem, 5.5vw + 1rem, 4.4rem);
+    font-weight: 560;
+    letter-spacing: -0.02em;
+    line-height: 1.04;
+    margin-bottom: 4px;
     color: var(--text);
 }
 
+/* Hand-drawn underline stroke, drawn in on load */
+.hero-stroke {
+    display: block;
+    width: min(240px, 52%);
+    height: 12px;
+    margin: 10px 0 2px 2px;
+    color: var(--accent);
+    overflow: visible;
+}
+
+.hero-stroke path {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+    animation: drawStroke 0.9s cubic-bezier(0.65, 0, 0.35, 1) 0.5s forwards;
+}
+
+@keyframes drawStroke {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
 .hero .tagline {
-    font-size: clamp(1.05rem, 1vw + 0.85rem, 1.2rem);
-    font-weight: 500;
-    background: linear-gradient(90deg, var(--gradient-1), var(--gradient-2));
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-size: clamp(1.08rem, 1vw + 0.88rem, 1.25rem);
+    font-weight: 480;
     color: var(--accent);
     display: inline-block;
+    margin-top: 10px;
 }
 
 .hero .location {
     color: var(--text-muted);
     font-size: 0.9rem;
-    margin-top: 10px;
+    margin-top: 8px;
 }
 
 /* Lead / thesis prose */
 .lead {
     max-width: 62ch;
-    margin: 30px auto 0;
+    margin: 30px 0 0;
     text-align: left;
 }
 
@@ -478,7 +541,8 @@ section[id] {
 }
 
 .role {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: var(--font-display);
+    font-optical-sizing: auto;
     font-size: 1.22rem;
     font-weight: 600;
     letter-spacing: -0.01em;
@@ -519,24 +583,29 @@ section[id] {
 
 .section-title {
     display: flex;
-    align-items: center;
-    gap: 12px;
-    font-family: 'Space Grotesk', sans-serif;
+    align-items: baseline;
+    gap: 14px;
+    font-family: var(--font-body);
     font-size: 0.74rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.16em;
     color: var(--text-muted);
-    margin-bottom: 22px;
+    margin-bottom: 24px;
 }
 
+/* Oversized ghosted numeral, e.g. 01 */
 .section-title::before {
-    content: "";
-    width: 22px;
-    height: 3px;
-    border-radius: 3px;
-    background: linear-gradient(90deg, var(--gradient-1), var(--gradient-2));
+    content: attr(data-num);
+    font-family: var(--font-display);
+    font-optical-sizing: auto;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1;
+    color: var(--ghost);
     flex-shrink: 0;
+    transform: translateY(0.12em);
 }
 
 .section-title::after {
@@ -544,6 +613,7 @@ section[id] {
     flex: 1;
     height: 1px;
     background: var(--border);
+    align-self: center;
 }
 
 /* Scroll-reveal (only applies when JS is available) */
@@ -645,7 +715,8 @@ section[id] {
 }
 
 .project-card__title {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: var(--font-display);
+    font-optical-sizing: auto;
     font-size: 1.1rem;
     font-weight: 600;
     letter-spacing: -0.01em;
@@ -765,7 +836,7 @@ section[id] {
     border-radius: 999px;
     background: transparent;
     color: var(--text-secondary);
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-body);
     font-size: 0.86rem;
     font-weight: 500;
     white-space: nowrap;
@@ -811,7 +882,8 @@ section[id] {
 }
 
 .content-section h4 {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: var(--font-display);
+    font-optical-sizing: auto;
     font-size: 0.8rem;
     font-weight: 600;
     color: var(--text-muted);
@@ -906,7 +978,8 @@ section[id] {
 }
 
 .article-header h1 {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: var(--font-display);
+    font-optical-sizing: auto;
     font-size: clamp(1.7rem, 3vw + 0.9rem, 2.2rem);
     font-weight: 700;
     letter-spacing: -0.025em;
@@ -926,7 +999,8 @@ section[id] {
 }
 
 .prose h2 {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: var(--font-display);
+    font-optical-sizing: auto;
     font-size: 1.22rem;
     font-weight: 600;
     letter-spacing: -0.01em;

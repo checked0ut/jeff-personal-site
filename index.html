@@ -13,12 +13,11 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Jeff Wulfsohn — Product Manager (AI-pilled)">
     <meta name="twitter:description" content="A product manager who uses AI to move faster than the org around him, and ships instead of frames.">
-    <meta name="theme-color" content="#f6f7f9" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#0b1120" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#faf8f5" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#141210" media="(prefers-color-scheme: dark)">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%2360a5fa'/><stop offset='100%25' stop-color='%23a5b4fc'/></linearGradient></defs><circle cx='50' cy='50' r='50' fill='url(%23g)'/><text x='50' y='55' text-anchor='middle' dominant-baseline='middle' font-family='sans-serif' font-size='36' font-weight='600' fill='white'>JW</text></svg>">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="assets/fonts/fraunces-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="styles.css">
     <script>
         // Apply saved/system theme before paint to avoid a flash
@@ -77,8 +76,8 @@
 
     <main class="container" id="main">
         <section class="hero">
-            <div class="avatar">JW</div>
-            <h1>Jeff Wulfsohn</h1>
+            <div class="avatar" aria-hidden="true">JW</div>
+            <h1>Jeff Wulfsohn<svg class="hero-stroke" viewBox="0 0 240 12" aria-hidden="true"><path d="M3 9C58 3.5 128 2 237 5.5"/></svg></h1>
             <p class="tagline">AI-pilled human (also a PM)</p>
             <p class="location">📍 Melbourne, Australia</p>
             <div class="lead">
@@ -101,7 +100,7 @@
         </a>
 
         <section class="section reveal" id="now">
-            <h2 class="section-title">Right now</h2>
+            <h2 class="section-title" data-num="01">Right now</h2>
             <div class="right-now">
                 <p>I'm leading billing and monetisation work at a B2B SaaS company through a major platform migration, helping colleagues across the business get genuinely useful at AI tooling, building the next module of Dumbledore (my OpenClaw), and raising my infant son.</p>
                 <span class="update-note">I update this section every month or so.</span>
@@ -109,7 +108,7 @@
         </section>
 
         <section class="section" id="projects">
-            <h2 class="section-title">Things I've built</h2>
+            <h2 class="section-title" data-num="02">Things I've built</h2>
             <div class="project-grid">
                 <a class="project-card reveal" href="projects/ai-for-pms/">
                     <span class="project-card__title">AI for PMs, in practice</span>
@@ -142,7 +141,7 @@
         </section>
 
         <section class="section" id="inspiration">
-            <h2 class="section-title">People who inspire me</h2>
+            <h2 class="section-title" data-num="03">People who inspire me</h2>
             <div class="inspiration-grid">
                 <a href="https://www.lennysnewsletter.com" target="_blank" rel="noopener" class="inspiration-item reveal">
                     <img src="https://www.google.com/s2/favicons?domain=lennysnewsletter.com&sz=128" alt="" width="48" height="48" loading="lazy" decoding="async">
@@ -179,7 +178,7 @@
         </section>
 
         <section class="section reveal" id="content" data-tabs>
-            <h2 class="section-title">Content I'm consuming</h2>
+            <h2 class="section-title" data-num="04">Content I'm consuming</h2>
 
             <div class="content-section">
                 <h4><img src="https://www.google.com/s2/favicons?domain=open.spotify.com&sz=64" alt="" width="16" height="16" loading="lazy" decoding="async"> Spotify</h4>
