@@ -1,0 +1,14 @@
+/* TEAM */
+Owner: Jeff Wulfsohn
+Role: Product Manager (AI-pilled)
+Location: Melbourne, Australia
+Contact: linkedin.com/in/jeff-wulfsohn
+
+/* SITE */
+Built with: HTML, CSS, JavaScript — no framework, no build step
+Built using: Claude Code, in thirty-minute sprints
+Fonts: Fraunces, Inter (self-hosted)
+Hosting: GitHub Pages
+
+The thesis on the homepage isn't a static claim. If this file looks
+stale in six months, something's gone wrong.

@@ -411,6 +411,14 @@ section[id] {
     opacity: 0.9;
 }
 
+/* Portrait photo slot: drop assets/portrait.jpg in and swap the markup */
+.avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 .hero h1 {
     font-family: var(--font-display);
     font-optical-sizing: auto;
@@ -524,8 +532,6 @@ section[id] {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background: #ffffff;
-    border: 1px solid var(--border);
     flex-shrink: 0;
     transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -535,8 +541,8 @@ section[id] {
 }
 
 .current-role .company-logo img {
-    width: 65%;
-    height: 65%;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
 }
 
@@ -1321,6 +1327,58 @@ button:focus-visible,
     .js .reveal {
         opacity: 1;
         transform: none;
+    }
+}
+
+/* ============================================================
+   Print
+   ============================================================ */
+@media print {
+    body::before,
+    body::after,
+    .site-header,
+    .skip-link,
+    .theme-toggle,
+    .nav-toggle,
+    .back-to-top,
+    .progress-bar,
+    .project-pager,
+    .hero-stroke {
+        display: none !important;
+    }
+
+    body {
+        background: #fff;
+        color: #000;
+    }
+
+    .container {
+        max-width: none;
+        padding: 0;
+    }
+
+    .prose p,
+    .prose li,
+    .lead p,
+    .article-dek {
+        color: #222;
+    }
+
+    .current-role,
+    .right-now,
+    .project-card,
+    .inspiration-item {
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+
+    a {
+        color: inherit;
+    }
+
+    .js .reveal {
+        opacity: 1 !important;
+        transform: none !important;
     }
 }
 

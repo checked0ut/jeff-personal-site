@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page not found — Jeff Wulfsohn</title>
+    <meta name="robots" content="noindex">
+    <meta name="theme-color" content="#faf8f5" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#141210" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%231c1a17'/><text x='50' y='57' text-anchor='middle' dominant-baseline='middle' font-family='Georgia, serif' font-size='40' font-weight='600' fill='%23faf8f5'>JW</text></svg>">
+    <link rel="preload" href="/jeff-personal-site/assets/fonts/fraunces-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/jeff-personal-site/assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/jeff-personal-site/styles.css">
+    <script>
+        (function () {
+            document.documentElement.classList.add('js');
+            var s = localStorage.getItem('theme');
+            var d = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (s === 'dark' || (!s && d)) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+    <style>
+        .notfound {
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            text-align: left;
+        }
+        .notfound-code {
+            font-family: var(--font-display);
+            font-optical-sizing: auto;
+            font-size: clamp(5rem, 18vw, 9rem);
+            font-weight: 560;
+            line-height: 1;
+            color: var(--ghost);
+        }
+        .notfound h1 {
+            font-family: var(--font-display);
+            font-optical-sizing: auto;
+            font-size: clamp(1.6rem, 4vw, 2.2rem);
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin: 12px 0 10px;
+            color: var(--text);
+        }
+        .notfound p {
+            color: var(--text-secondary);
+            max-width: 46ch;
+        }
+        .notfound-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            min-height: 48px;
+            margin-top: 24px;
+            padding: 0 22px;
+            border-radius: 999px;
+            background: var(--text);
+            color: var(--bg);
+            font-weight: 500;
+            font-size: 0.92rem;
+            text-decoration: none;
+            transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s ease;
+        }
+        .notfound-home:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+    </style>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a class="brand" href="/jeff-personal-site/">Jeff Wulfsohn</a>
+        </div>
+    </header>
+
+    <main class="container" id="main">
+        <section class="notfound">
+            <span class="notfound-code" aria-hidden="true">404</span>
+            <h1>This page doesn't exist</h1>
+            <p>The site updates as the work changes, so this page may have moved or retired. Everything current lives on the homepage.</p>
+            <a class="notfound-home" href="/jeff-personal-site/">Back to the homepage</a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Melbourne, Australia</p>
+        <div class="social-links">
+            <a href="https://linkedin.com/in/jeff-wulfsohn" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://checked0ut.github.io/jeff-personal-site/sitemap.xml
