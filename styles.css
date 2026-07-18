@@ -815,6 +815,7 @@ section[id] {
 
 /* Card title morphs into the article heading (Chromium) */
 .vt-ai-for-pms { view-transition-name: title-ai-for-pms; }
+.vt-squiz { view-transition-name: title-squiz; }
 .vt-board-of-advisors { view-transition-name: title-board-of-advisors; }
 .vt-dumbledore { view-transition-name: title-dumbledore; }
 .vt-this-site { view-transition-name: title-this-site; }

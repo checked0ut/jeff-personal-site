@@ -15,6 +15,7 @@ PAGES = [
     "index.html",
     "404.html",
     "projects/ai-for-pms/index.html",
+    "projects/squiz/index.html",
     "projects/board-of-advisors/index.html",
     "projects/dumbledore/index.html",
     "projects/this-site/index.html",

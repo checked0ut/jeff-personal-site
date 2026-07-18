@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Squiz — a streaming swipe watchlist — Jeff Wulfsohn</title>
+    <meta name="description" content="A Tinder-style watchlist for Australian streaming, built end-to-end with Claude Code — one static page, a free Supabase backend, and a reusable skill that scaffolds new apps from the same skeleton.">
+    <link rel="canonical" href="https://checked0ut.github.io/jeff-personal-site/projects/squiz/">
+    <meta property="og:title" content="Squiz — a streaming swipe watchlist — Jeff Wulfsohn">
+    <meta property="og:description" content="A Tinder-style watchlist for Australian streaming, built end-to-end with Claude Code.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://checked0ut.github.io/jeff-personal-site/projects/squiz/">
+    <meta property="og:image" content="https://checked0ut.github.io/jeff-personal-site/assets/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Jeff Wulfsohn — AI-pilled human (also a PM)">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://checked0ut.github.io/jeff-personal-site/assets/og-image.png">
+    <meta name="theme-color" content="#faf8f5" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#141210" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%231c1a17'/><text x='50' y='57' text-anchor='middle' dominant-baseline='middle' font-family='Georgia, serif' font-size='40' font-weight='600' fill='%23faf8f5'>JW</text></svg>">
+    <link rel="preload" href="../../assets/fonts/fraunces-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../../styles.css">
+    <script>
+        (function () {
+            document.documentElement.classList.add('js');
+            var s = localStorage.getItem('theme');
+            var d = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (s === 'dark' || (!s && d)) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+    <script defer src="../../main.js"></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a class="brand" href="../../">Jeff Wulfsohn</a>
+            <nav class="site-nav" id="site-nav" aria-label="Site sections">
+                <a href="../../#now">Now</a>
+                <a href="../../#projects">Projects</a>
+                <a href="../../#inspiration">Inspiration</a>
+                <a href="../../#content">Content</a>
+            </nav>
+            <div class="header-actions">
+                <button type="button" class="theme-toggle" aria-label="Switch to dark mode">
+                    <svg class="icon-moon" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                    <svg class="icon-sun" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+                </button>
+                <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+                    <span class="nav-toggle__bar"></span>
+                    <span class="nav-toggle__bar"></span>
+                    <span class="nav-toggle__bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container" id="main">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="../../">Home</a><span class="sep">/</span><span class="current">Squiz</span>
+        </nav>
+
+        <article class="prose">
+            <header class="article-header">
+                <h1 class="vt-squiz">Squiz — a streaming swipe watchlist</h1>
+                <p class="article-dek">A Tinder-style watchlist for Australian streaming, built end-to-end with Claude Code.</p>
+            </header>
+
+            <h2>The itch</h2>
+            <p>"What should we watch tonight" looks like a solved problem. It isn't. Every streaming service recommends its own catalogue, none of them know what you've already watched on the others, and the global best-of lists keep suggesting things that don't actually stream in Australia. The search kept ending the same way at our place: scrolling, then rewatching something safe. I wanted picking a show to feel like flicking through a deck of cards, not doing research.</p>
+
+            <h2>What it does</h2>
+            <p>Squiz is a swipe watchlist. Sign in with Google, pick which streaming services you have — all the major Australian ones are covered, from Netflix and Stan through to ABC iview and Tubi, 23 in total — and swipe. Right means watched. Left means not for me. Press and hold means currently watching, and a detail view lets you save things to a watchlist for later.</p>
+            <p>The core mechanic is what happens after the swipe: every card you clear is automatically replaced with a fresh recommendation that actually streams on the same service, in Australia, checked at the moment it's dealt. The deck never runs dry, and it never suggests something you can't play tonight. It's live at <a href="https://squiz-nine.vercel.app/" target="_blank" rel="noopener">squiz-nine.vercel.app</a>.</p>
+
+            <h2>How it's built</h2>
+            <p>The stack is deliberately boring. The entire frontend is one static HTML page on Vercel — no framework, no build step, no package manager. Supabase's free tier does the heavy lifting: Google sign-in, a Postgres database with row-level security so each user can only ever touch their own data, and edge functions that pick the replacement shows. Streaming availability comes from TMDB and JustWatch, IMDb ratings from OMDb. Total running cost: zero.</p>
+            <p>I didn't write the code — Claude Code did, across many sessions. My job was the product: what a card shows, how the swipe and the four-second undo window should feel, the rule that a replacement must stay on the service you swiped from, and the content policy (no soap operas, no talk shows, no news). The engineering discipline that made those sessions compound is documentation written for the agent — CLAUDE.md files that describe the system's shape and its invariants, with a standing rule that any change making them false has to update them in the same commit.</p>
+
+            <h2>The app became a factory</h2>
+            <p>Once Squiz worked, the interesting question wasn't what feature to add next. It was how much of the app was reusable. The answer turned out to be almost all of the glue: the auth flow, the database security idioms, the edge-function shell, the SEO and social metadata, the icon pipeline, even the scheduled job that pings the free-tier database so it doesn't pause from inactivity.</p>
+            <p>So the repo now carries a Claude Code skill — a packaged playbook plus templates distilled from the working app. Point Claude Code at an empty repo, invoke the skill, answer a set of intake questions (name, purpose, brand colours, what data the app holds), and it stands up a brand-new app on the same skeleton: scaffolded from the templates, provisioned on Supabase, deployed on Vercel, Google sign-in working end to end. Every phase ends with a verification gate that has to pass before the next one starts, so the process can't quietly skip the hard parts.</p>
+            <p>The first app took the long road. Every app after it starts from the proven skeleton. That's the PM instinct applied to code: don't just ship the thing — ship the ability to make more of the thing.</p>
+
+            <h2>What I learned</h2>
+            <ol>
+                <li><span class="lead-in">Product taste is the scarce input now.</span> An agent covers the full stack. What it can't supply is judgement about what the product should be. The hard decisions in Squiz were product decisions — the undo window, the same-service replacement rule, what to exclude from the deck — not code decisions.</li>
+                <li><span class="lead-in">Docs for the agent are the new maintainability.</span> The CLAUDE.md files, and the skill they fed, are why session twenty was as productive as session two. Write down the system's shape and invariants, keep them true, and every new session picks up exactly where the last one left off.</li>
+            </ol>
+        </article>
+
+        <nav class="project-pager" aria-label="More projects">
+            <a class="pager-link pager-prev" href="../ai-for-pms/">
+                <span class="pager-label">&larr; Previous project</span>
+                <span class="pager-title">AI for PMs, in practice</span>
+            </a>
+            <a class="pager-link pager-next" href="../board-of-advisors/">
+                <span class="pager-label">Next project &rarr;</span>
+                <span class="pager-title">Board of Advisors</span>
+            </a>
+        </nav>
+    </main>
+
+    <footer class="site-footer">
+        <p>Melbourne, Australia</p>
+        <div class="social-links">
+            <a href="https://linkedin.com/in/jeff-wulfsohn" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+    </footer>
+</body>
+</html>
